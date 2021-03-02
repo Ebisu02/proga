@@ -65,14 +65,15 @@ void lab_2_2() {
 	pos_and_neg_num(m, 0);
 }
 
-void bin_2(int a) {
+void bin_2(int a, vector<int>& result) {
 	if (a / 2 == 0) {
-		cout << a % 2;
+		result.push_back(a % 2);
+		reverse(result.begin(), result.end());
 		return;
 	}
 	else {
-		cout << a % 2;
-		return bin_2(a / 2);
+		result.push_back(a % 2);
+		return bin_2(a / 2, result);
 	}
 }
 
@@ -80,10 +81,13 @@ void lab_2_3() {
 	cout << "\n\nEx.3\n\n";
 	cout << "Our number in 10 system\n";
 	srand(time(NULL));
-	int num = rand() % 10;
+	int num = rand() % 100;
+	vector <int> bin;
 	cout << num;
 	cout << "\nOur number in 2 system:\n";
-	bin_2(num);
+	bin_2(num, bin);
+	for (auto i : bin)
+		cout << i;
 	return;
 }
 
