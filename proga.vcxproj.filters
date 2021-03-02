@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Исходные файлы">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Файлы заголовков">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Файлы ресурсов">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Файлы ресурсов\Labs">
+      <UniqueIdentifier>{8e65d3fa-1241-4f89-ab10-5f641fe189b8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы ресурсов\Labs\Lab 1">
+      <UniqueIdentifier>{9b80c5a1-8829-424b-9bd8-d9ce0663fb6f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы ресурсов\Labs\Lab 2">
+      <UniqueIdentifier>{8a470be0-642a-4d54-93fc-1fc44e4e8c49}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы ресурсов\Labs\Lab 3">
+      <UniqueIdentifier>{37cb5ad5-106b-4d5d-85f6-400ffa9115aa}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="lab_1.cpp">
+      <Filter>Файлы ресурсов\Labs\Lab 1</Filter>
+    </ClCompile>
+    <ClCompile Include="lab_2.cpp">
+      <Filter>Файлы ресурсов\Labs\Lab 2</Filter>
+    </ClCompile>
+    <ClCompile Include="lab_3.cpp">
+      <Filter>Файлы ресурсов\Labs\Lab 3</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include.h">
+      <Filter>Файлы ресурсов\Labs</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
