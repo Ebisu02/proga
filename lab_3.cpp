@@ -85,8 +85,9 @@ void lab_3_1() {
 	for (int i = 0; i < size_pos; ++i) {
 		cout << *(arr_pos + i) << " ";
 	}
-	free(arr); free(arr_pos); free(arr_neg);
-	arr = NULL; arr_pos = NULL; arr_neg = NULL;
+	free(arr); 
+	free(arr_pos); 
+	free(arr_neg);
 	return;
 }
 
@@ -125,8 +126,8 @@ void lab_3_2() {
 	for (int i = 0; i < size; ++i) {
 		cout << *(arr + i) << " ";
 	}
-	delete[] arr; delete[] arr_link;
-	arr = NULL; arr_link = NULL;
+	delete[] arr;
+	delete[] arr_link;
 	return;
 }
 
@@ -155,7 +156,6 @@ void lab_3_3() {
 		}
 	}
 	delete[] arr;
-	arr = NULL;
 	return;
 }
 

@@ -51,14 +51,13 @@ void lab_4_1() {
 		++ic;
 	}
 	delete[] arr; delete[] arrC;
-	arr = NULL; arrC = NULL;
 	return;
 }
 
 void lab_4_2() {
 	srand(time(NULL));
 	cout << "\n\nEx.2\n\n";
-	int sizeM = 3; int sizeN = 3;
+	int sizeM = 2; int sizeN = 3;
 	/*
 	cout << "\nEnter a size for Matrix with size m x n: \n";
 	cout << "\nm = ";
@@ -87,20 +86,23 @@ void lab_4_2() {
 	}
 	int sum = 0;
 	for (int i = 0; i < sizeM; ++i) {
-		int sumstr = 0, sumcol = 0;
+		int sumstr = 0;
 		for (int j = 0; j < sizeN; ++j) {
 			sumstr += arrA[i][j];
-			if (j < sizeM) {
-				sumcol += arrA[j][i];
-			}
 			sum += arrA[i][j];
 			arrD[i][j] = arrA[i][j];  
-			if (i == sizeM - 1 && j == sizeN - 1) {
-				arrD[sizeM][sizeN] = sum;
-			}
-			arrD[sizeM][i] = sumcol;
-			arrD[i][sizeN] = sumstr;
 		}
+		if (i == sizeM - 1) {
+			arrD[sizeM][sizeN] = sum;
+		}
+		arrD[i][sizeN] = sumstr;
+	}
+	for (int i = 0; i < sizeN; ++i) {
+		int sumcol = 0;
+		for (int j = 0; j < sizeM; ++j) {
+			sumcol += arrA[j][i];
+		}
+		arrD[sizeM][i] = sumcol;
 	}
 	for (int i = 0; i <= sizeM; ++i) {
 		for (int j = 0; j <= sizeN; ++j) {
@@ -108,16 +110,6 @@ void lab_4_2() {
 		}
 		cout << "\n";
 	}
-	for (int i = 0; i < sizeM; ++i) {
-		delete[] arrA[i];
-	}
-	delete[] arrA;
-	arrA = NULL;
-	for (int i = 0; i < sizeM + 1; ++i) {
-		delete[] arrD[i];
-	}
-	delete[] arrD;
-	arrD = NULL;
 	return;
 }
 
