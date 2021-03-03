@@ -23,11 +23,20 @@ void lab_3();
 
 #endif
 
+#ifndef LAB_4_H
+#define LAB_4_H
+
+void lab_4();
+
+#endif
+
 #include <iostream>
 #include <string>
 #include <algorithm>
 #include <set>
 #include <vector>
+#include <stdio.h>
+#include <stdlib.h>
 
 
 
