@@ -86,4 +86,5 @@ void lab_5() {
 	lab_5_1();
 	cout << "\n\n\nEx. #2\n\n";
 	lab_5_2();
+	return;
 }

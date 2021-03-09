@@ -11,5 +11,8 @@ int main() {
 	lab_4();
 	cout << "\n\n\n\t\t\t\tLab. #5\n";
 	lab_5();
+	cout << "\n\n\n\t\t\t\tLab. #6\n";
+	lab_6();
+	system("PAUSE");
 	return 0;
 }
