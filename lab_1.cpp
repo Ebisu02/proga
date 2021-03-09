@@ -10,7 +10,20 @@ int factorial(int x) {
 	}
 }
 
-double power(double a, int n) { // a - number , n - power
+float power(float a, int n) { // a - number , n - power
+	if (n == 0) {
+		return 1;
+	}
+	if (n > 0) {
+		return a * power(a, n - 1);
+	}
+	if (n < 0) {
+		n = -n;
+		return 1. / (a * power(a, n - 1));
+	}
+}
+
+double power(double a, double n) { // a - number , n - power
 	if (n == 0) {
 		return 1;
 	}
