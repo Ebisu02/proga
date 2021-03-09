@@ -30,6 +30,13 @@ void lab_4();
 
 #endif
 
+#ifndef LAB_5_H
+#define LAB_5_H
+
+void lab_5();
+
+#endif
+
 #include <iostream>
 #include <string>
 #include <algorithm>

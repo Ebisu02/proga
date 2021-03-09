@@ -9,5 +9,7 @@ int main() {
 	lab_3();
 	cout << "\n\n\n\t\t\t\tLab. #4\n";
 	lab_4();
+	cout << "\n\n\n\t\t\t\tLab. #5\n";
+	lab_5();
 	return 0;
 }

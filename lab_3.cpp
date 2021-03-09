@@ -12,7 +12,7 @@
 3.¬вести с клавиатуры число n, вычислить и вывести с помощью алгоритма Урешето ЁратосфенаФ(изучить  алгоритм самосто€тельно) простые числа в диапазон от 2 до n.
   »спользовать динамический массив размера n.
 */
-void ShakerSort(double* arr, int size)
+void ShakerSort(double** arr, int size)
 {
 	int left = 0, right = size - 1;
 	int flag = 1;
@@ -21,18 +21,18 @@ void ShakerSort(double* arr, int size)
 		flag = 0;
 		for (int i = left; i < right; i++)
 		{
-			if (arr[i] > arr[i + 1])
+			if (*arr[i] > *arr[i + 1])
 			{
-				swap(arr[i], arr[i + 1]);
+				swap(*arr[i], *arr[i + 1]);
 				flag = 1;
 			}
 		}
 		right--;
 		for (int i = right; i > left; i--)
 		{
-			if (arr[i - 1] > arr[i])
+			if (*arr[i - 1] > *arr[i])
 			{
-				swap(arr[i], arr[i - 1]);
+				swap(*arr[i], *arr[i - 1]);
 				flag = 1;
 			}
 		}
@@ -40,7 +40,7 @@ void ShakerSort(double* arr, int size)
 	}
 	cout << "\n";
 	for (int i = 0; i < size; ++i) {
-		cout << arr[i] << " ";
+		cout << *arr[i] << " ";
 	}
 }
 
@@ -104,22 +104,14 @@ void lab_3_2() {
 		*(arr + i) = 0.01 * ((rand() % 100) - 50);
 		cout << *(arr + i) << " ";
 	}
-	double* arr_link;
-	arr_link = new double[size];
-	cout << "\nLinks:\n";
+	double** arr_link;
+	arr_link = new double* [size];
 	for (int i = 0; i < size; ++i) {
-		arr_link[i] = *&arr[i];
-		cout << &arr_link[i] << " ";
+		arr_link[i] = new double;
 	}
-	/*
-	double** arr_link = &arr;
-	cout << "\nLinks:\n";
 	for (int i = 0; i < size; ++i) {
-		cout << *(arr_link + i) << " ";
+		*arr_link[i] = arr[i];
 	}
-	cout << "\nSorted array:\n";
-	ShakerSort(arr_link, size);
-	*/
 	cout << "\nSorted array:";
 	ShakerSort(arr_link, size);
 	cout << "\nOriginal array\n";
