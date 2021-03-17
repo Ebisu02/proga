@@ -34,6 +34,9 @@
     <Filter Include="Файлы ресурсов\Labs\Lab 6">
       <UniqueIdentifier>{ed087698-2865-4397-b481-9cb1f967a627}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Файлы ресурсов\Labs\Lab 7">
+      <UniqueIdentifier>{554896e0-a50f-48ab-b0b4-6fcd97f7cbec}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -56,6 +59,9 @@
     </ClCompile>
     <ClCompile Include="lab_6.cpp">
       <Filter>Файлы ресурсов\Labs\Lab 6</Filter>
+    </ClCompile>
+    <ClCompile Include="lab_7.cpp">
+      <Filter>Файлы ресурсов\Labs\Lab 7</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

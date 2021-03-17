@@ -44,6 +44,13 @@ void lab_6();
 
 #endif
 
+#ifndef LAB_7_H
+#define LAB_7_H
+
+void lab_7();
+
+#endif
+
 #include <iostream>
 #include <string>
 #include <algorithm>
@@ -51,7 +58,7 @@ void lab_6();
 #include <vector>
 #include <stdio.h>
 #include <stdlib.h>
-
+#include <ctime>
 
 
 using namespace std;
