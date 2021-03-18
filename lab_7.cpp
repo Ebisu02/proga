@@ -13,12 +13,12 @@ void BubbleSort_inv(int arr[], int size) {
 
 
 int binarySearch(int arr[], int size, int key, int &c) { 
-	int left = -1;                 // left, right — левая и правая границы
+	/*int left = 0;                 // left, right — левая и правая границы
 	int right = size;
 	int mid = 0;
 	while (left < right - 1) {   
 		++c;
-		mid = (left + right) / 2;        // mid — середина области поиска
+		mid = (left + right) / 2;  // mid — середина области поиска
 		if (arr[mid] > key) {
 			left = mid;
 		}
@@ -29,7 +29,22 @@ int binarySearch(int arr[], int size, int key, int &c) {
 	if (arr[right] == key) 
 		return right;
 	else
-		return -1;
+		return -1;*/
+	int low = size - 1;
+	int high = 0;
+	while (low >= high) {
+		int mid = (low + high) / 2;
+		if (key == arr[mid] && ++c) {
+			return mid;
+		}
+		else if (key > arr[mid] && ++c) {
+			low = mid - 1;
+		}
+		else {
+			high = mid + 1;
+		}
+	}
+	return -1;
 }
 
 
