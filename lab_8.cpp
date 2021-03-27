@@ -4,7 +4,6 @@ struct School {
 	int sch_num; // Number of school
 	int am_std_dsch; // Amount of students what done with school
 	int am_std_univ; // Amount of students what join to the university after school
-	float proc_un;
 };
 
 void IndexSort(School arr[], int size, int indexArr[]) {
