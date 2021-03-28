@@ -51,6 +51,13 @@ void lab_7();
 
 #endif
 
+#ifndef LAB_8_H
+#define LAB_8_H
+
+void lab_8();
+
+#endif
+
 #include <iostream>
 #include <string>
 #include <algorithm>
