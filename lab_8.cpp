@@ -7,7 +7,9 @@ struct School {
 	double procent_university;
 };
 
-void IndexSort(School arr[], int size, int indexArr[]) {
+template <typename T>
+
+void IndexSort(T arr[], int size, int indexArr[]) {
 	for (int i = 0; i < size - 1; i++) {
 		for (int j = 0; j < size - i - 1; j++) {
 			if (arr[indexArr[j]].procent_university < arr[indexArr[j + 1]].procent_university) {
