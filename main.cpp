@@ -32,6 +32,9 @@ int main() {
 	case 9: cout << "\n\n\n\t\t\t\tLab. #9\n";
 			lab_9();
 			break;
+	case 10: cout << "\n\n\n\t\t\t\tLab. #10\n";
+			 //lab_10();
+			 break;
 	}
 	system("PAUSE");
 	return 0;

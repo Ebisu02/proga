@@ -1,4 +1,3 @@
-#pragma once
 #ifndef INCLUDE_H
 
 
@@ -65,6 +64,13 @@ void lab_9();
 
 #endif
 
+#ifndef LAB_10_H
+#define LAB_10_H
+
+void lab_10();
+
+#endif
+
 #include <iostream>
 #include <string>
 #include <algorithm>
@@ -73,7 +79,11 @@ void lab_9();
 #include <stdio.h>
 #include <stdlib.h>
 #include <ctime>
-
+#include <list>
+#include <ctime>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
 using namespace std;
 
