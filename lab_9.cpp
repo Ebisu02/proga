@@ -10,69 +10,66 @@ class List_One_Link {
 
 	public:
 
-		List_One_Link();	// ����������� (��� �������� ������ ������ ����)
-		~List_One_Link();	// ���������� (��� ���������� ������ ���������)
+		List_One_Link();	
+		~List_One_Link();	
 
-		void pop_front();		// ����� ��� �������� ������� �������� ������ (������)
-		void push_back(T data); // ����� ��� ���������� �������� � ����� ������
-		int GetSize();			// ����� ��� ��������� ������� ������
-		void clear();			// ����� ��� ������� ������
+		void pop_front();		
+		void push_back(T data);
+		int GetSize();			
+		void clear();		
 
-		T& operator[](const int index); // ������ ��� ������ � ����������� �������� (��� �������� � �.�.)
+		T& operator[](const int index);
 
 	private:
 	
 		template <typename T> 
-		class Node { // ��������� ����� Node(����), �.�. �� ���� 1 �� ��������� ������
+		class Node {
 		
 		public:
-			Node* pNext;	// ��������� �� ����� � ������ ���������� ������ �������� � ������
-			T data;			// �����-�� ������, ������� �������� � ������ ����
-			Node(T data = T(), Node* pNext = NULL) { // ����������� ������ Node
-				// �������� �� ��������� ��� data - 
-				// ��� ����� ������������ �� ��������� (� ������� ����. �������)
-				// �������� �� ��������� ��� pNext - �� ����� ����
-				this->data = data;		// ����������� �������� ���������
-				this->pNext = pNext;	// ����������� �������� ���������
+			Node* pNext;	
+			T data;			
+			Node(T data = T(), Node* pNext = NULL) {
+				this->data = data;		
+				this->pNext = pNext;	
 			}
 		};
-		int Size;		// ������ ������
-		Node<T> *head;	// ��������� �� ������ ������
+		int Size;		
+		Node<T> *head;	
 };
 
 template <typename T>
 List_One_Link<T>::List_One_Link() {
-	Size = 0;		// �.�. �� ������ ������� ������, �� ������ � ���� ���� ����� ����
-	head = nullptr; // �� ����� ����� ����� ��� �� ������ ������ ��� ������ ����
+	Size = 0;		
+	head = nullptr; 
 }
 
 template <typename T>
-List_One_Link<T>::~List_One_Link() { // ����������, ����� �� ���� ������ ������
-	clear(); // ��� ���� ����� �������� ������, ����� ���������� ���� ���������
+List_One_Link<T>::~List_One_Link() { 
+	clear();
 }
 
 template<typename T>
 void List_One_Link<T>::pop_front() {
-	Node<T> *Temp = head;	// �������� ��������� �� ������ ������, ��� �������� ������ ������
-	head = head->pNext;		// ������ ������ ������ - ��������� �������
-	delete Temp;			// ������� ������ ������, ��� ������ ������ ������ ������
-	--Size;					// ��������� ������ ������, �.�. �� ��� ������ �������
+	Node<T> *Temp = head;	
+	head = head->pNext;		
+	delete Temp;			
+	--Size;					
 }
 
 template<typename T>
 void List_One_Link<T>::push_back(T data) {
 
-	if (head == nullptr) {					// ���� � ������ ��� ��� ���������
-		head = new Node<T>(data);			// ������� ����� ������� � ������
+	if (head == nullptr) {					
+		head = new Node<T>(data);			
 	}
-	else {									// ���� � ������ ��� ���� ��������
-		Node<T>* Current = this->head;		// ��������� ����������, �� ��������� ����� ������ ������ ������
+	else {									
+		Node<T>* Current = this->head;		
 		
-		while (Current->pNext != nullptr) { // ���� Current != ����� ������ 
-			Current = Current->pNext;		// ��������� � ���������� ��������
+		while (Current->pNext != nullptr) { 
+			Current = Current->pNext;		
 		}
 
-		Current->pNext = new Node<T>(data); // ������� ����� ������� � ������
+		Current->pNext = new Node<T>(data); 
 
 	}
 
@@ -80,12 +77,12 @@ void List_One_Link<T>::push_back(T data) {
 }
 
 template<typename T>
-int List_One_Link<T>::GetSize() { // ������� ����������� ������� ������
+int List_One_Link<T>::GetSize() { 
 	return Size;
 }
 
 template<typename T>
-void List_One_Link<T>::clear() { // ������� ������� ������
+void List_One_Link<T>::clear() {
 
 	while (Size) { // ���� Size > 0
 		pop_front();
@@ -94,11 +91,10 @@ void List_One_Link<T>::clear() { // ������� ������� 
 }
 
 template<typename T>
-T& List_One_Link<T>::operator[](const int index) { // ��� ������ � ���������
-											// ��� ��� ��� ����� ����� ���������� � ������ ��� List[0] � �.�.
-	int counter = 0; 
-	Node<T>* Current = this->head;			// �������� ���� ������ � ������ ������
-
+T& List_One_Link<T>::operator[](const int index) { 
+											
+	Node<T>* Current = this->head;			
+	int counter = 0;
 	while (Current != nullptr) {			// Пока это не конец списка
 		if (counter == index) {				// Если мы попали в нужный элемент списка
 			return Current->data;			// Возвращаем данные
@@ -128,9 +124,8 @@ void lab_9_1() {
 	string exampleSurname[10] = { {"Guliev"}, {"Artemev"}, {"Shemenkov"}, {"Pletuhin"}, {"Pertsev"}, {"Ivanov"}, {"Petrov"}, {"Fedorov"}, {"Ososov"}, {"Pivchik"} };
 	int exampleGrade[] = { {2}, {3}, {4}, {5} };
 	List_One_Link<info> listOfStudents;
-	// ��������� ��� ������
 	for (int i = 0; i < size; ++i) {
-		info buf; // ��������� ���������� ��� ��������� ������ � ������
+		info buf;
 		buf.Surname = exampleSurname[i];
 		cout << "\n" << buf.Surname << " ";
 		for (int j = 0; j < 4; ++j) {
@@ -139,7 +134,6 @@ void lab_9_1() {
 		}
 		listOfStudents.push_back(buf);
 	}
-	// �������� ��������� ������ ��� ���������� ������� ����� �����
 	int* arr;
 	arr = new int[size];
 	cout << "\n\nIndex array before:\n";
@@ -147,10 +141,8 @@ void lab_9_1() {
 		arr[i] = i;
 		cout << arr[i] << " ";
 	}
-	// ��������� ��� ������
 	IndexSort(listOfStudents, arr, size);
 	cout << "\n\nList after Sort:\n";
-	// ����� ��������������� ������
 	for (int i = 0; i < size; ++i) {
 		info buf = listOfStudents[arr[i]];
 		cout << "\n" << buf.Surname;
@@ -159,7 +151,6 @@ void lab_9_1() {
 			cout << buf.Grades[j] << " ";
 		}
 	}
-	// ��������� ������ �������
 	cout << "\n\nIndex array after Sort:\n";
 	for (int i = 0; i < size; ++i) {
 		cout << arr[i] << " ";

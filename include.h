@@ -84,6 +84,7 @@ void lab_10();
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <fstream>
 
 using namespace std;
 

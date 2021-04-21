@@ -33,7 +33,7 @@ int main() {
 			lab_9();
 			break;
 	case 10: cout << "\n\n\n\t\t\t\tLab. #10\n";
-			 //lab_10();
+			 lab_10();
 			 break;
 	}
 	system("PAUSE");
